@@ -1,7 +1,6 @@
 server:
   port: 8888
-  
-spring: 
+spring:
   cloud:
     config:
       server:
@@ -13,5 +12,8 @@ spring:
           password: ${GIT_PASSWORD}
   security:
     user:
-      name: root
-      password: s3cr3t          
+      name: rquimbiulco
+      password: s3cr3t
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n'
