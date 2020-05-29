@@ -29,11 +29,7 @@ management:
     web:
       exposure:
         include:
-        - '*'
-  endpoint:
-    hystrix:
-      stream:
-        enabled: true         
+        - '*'     
 logging:
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n'  
