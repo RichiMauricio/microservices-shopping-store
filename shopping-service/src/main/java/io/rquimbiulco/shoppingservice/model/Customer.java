@@ -3,16 +3,23 @@
  */
 package io.rquimbiulco.shoppingservice.model;
 
-import lombok.Builder;
+import java.io.Serializable;
+
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Richard
  *
  */
 @Data
-@Builder
-public class Customer {
+@NoArgsConstructor
+public class Customer implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private Long id;
 
