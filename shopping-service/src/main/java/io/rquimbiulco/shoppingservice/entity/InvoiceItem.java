@@ -27,6 +27,7 @@ public class InvoiceItem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	@Positive(message = "El stock debe ser mayor que cero")
 	private Double quantity;
 	private Double price;
