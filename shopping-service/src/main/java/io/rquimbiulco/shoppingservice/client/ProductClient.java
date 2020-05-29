@@ -19,11 +19,12 @@ import io.rquimbiulco.shoppingservice.model.Product;
 @FeignClient(name = "product-service")
 @RequestMapping(value = "/product")
 public interface ProductClient {
+	
+	@GetMapping(value = "/findProduct/{productId}")
+	public ResponseEntity<Product> getProduct(@PathVariable("productId") Long productId);
 
-	@GetMapping(value = "/{id}")
-	public ResponseEntity<Product> getProduct(@PathVariable("id") Long id);
-
-	@GetMapping(value = "/{id}/stock")
-	public ResponseEntity<Product> updateStockProduct(@PathVariable("id") Long id,
+	@GetMapping(value = "/updateStockProduct/{idProduct}/stock")
+	public ResponseEntity<Product> updateStockProduct(@PathVariable("idProduct") Long idProduct,
 			@RequestParam(name = "quantity", required = true) Double quantity);
+
 }
