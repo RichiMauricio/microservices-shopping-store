@@ -21,6 +21,15 @@ spring:
         show_sql: true
         use_sql_comments: false
         format_sql: false
+Feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"           
 logging:
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n'  
