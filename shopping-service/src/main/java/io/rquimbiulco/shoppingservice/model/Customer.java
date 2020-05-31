@@ -5,15 +5,15 @@ package io.rquimbiulco.shoppingservice.model;
 
 import java.io.Serializable;
 
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Richard
  *
  */
 @Data
-@Builder
+@NoArgsConstructor
 public class Customer implements Serializable {
 
 	/**
