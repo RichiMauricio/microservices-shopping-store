@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: customer-service
+        uri: lb://customer-service
+        predicates:
+        - Path=/customers/**
+      - id: product-service
+        uri: lb://product-service
+        predicates:
+        - Path=/products/**
+      - id: shopping-service
+        uri: lb://shopping-service
+        predicates:
+        - Path=/invoices/**
+        
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n'  
