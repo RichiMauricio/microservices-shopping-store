@@ -4,3 +4,4 @@ Proyecto de ejemplo del uso de mircoservicios con
 * eureka server
 * cyrcuit breaker pattern
 * api gateway
+* external configuration
