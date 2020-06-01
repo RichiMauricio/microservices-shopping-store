@@ -7,3 +7,7 @@ spring:
       - http://localhost:8888
       username: rquimbiulco
       password: s3cr3t
+  boot:
+    admin:
+      client:
+        url: http://localhost:8085      
