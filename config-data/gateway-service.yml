@@ -31,7 +31,7 @@ spring:
         registration:
           keycloak:
             client-id: gateway-service
-            client-secret: 4e33cdca-c90f-4301-94a2-0913628586e2        
+            client-secret: 4e33cdca-c90f-4301-94a2-0913628586e2
 logging:
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n'
