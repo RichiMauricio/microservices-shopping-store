@@ -21,6 +21,11 @@ spring:
         show_sql: true
         use_sql_comments: false
         format_sql: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/dev        
 management:
   endpoints:
     web:
