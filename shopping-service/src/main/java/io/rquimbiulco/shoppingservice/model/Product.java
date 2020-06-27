@@ -4,12 +4,14 @@
 package io.rquimbiulco.shoppingservice.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author Richard
  *
  */
 @Data
+@NoArgsConstructor
 public class Product {
 
 	private Long id;

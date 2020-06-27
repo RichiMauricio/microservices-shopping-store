@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -57,7 +58,7 @@ public class InvoiceController {
 	// -------------------Retrieve Single
 	// Invoice------------------------------------------
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Invoice> getInvoice(@PathVariable("id") long id) {
+	public ResponseEntity<Invoice> getInvoice(@PathVariable("id") long id, @RequestHeader Map<String, String> headers) {
 		log.info("Fetching Invoice with id {}", id);
 		Invoice invoice = invoiceService.getInvoice(id);
 		if (null == invoice) {

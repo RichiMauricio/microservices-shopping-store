@@ -22,4 +22,5 @@ public interface InvoiceService {
 	public Invoice deleteInvoice(Invoice invoice);
 
 	public Invoice getInvoice(Long id);
+
 }

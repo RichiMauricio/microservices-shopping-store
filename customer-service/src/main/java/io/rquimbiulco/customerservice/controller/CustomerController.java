@@ -67,7 +67,6 @@ public class CustomerController {
 				return ResponseEntity.notFound().build();
 			}
 		}
-
 		return ResponseEntity.ok(customers);
 	}
 
@@ -94,9 +93,7 @@ public class CustomerController {
 		if (result.hasErrors()) {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(this.formatMessage(result));
 		}
-
 		Customer customerDB = customerService.createCustomer(customer);
-
 		return ResponseEntity.status(HttpStatus.CREATED).body(customerDB);
 	}
 
@@ -106,9 +103,7 @@ public class CustomerController {
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<?> updateCustomer(@PathVariable("id") long id, @RequestBody Customer customer) {
 		log.info("Updating Customer with id {}", id);
-
 		Customer currentCustomer = customerService.getCustomer(id);
-
 		if (null == currentCustomer) {
 			log.error("Unable to update. Customer with id {} not found.", id);
 			return ResponseEntity.notFound().build();
@@ -124,7 +119,6 @@ public class CustomerController {
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Customer> deleteCustomer(@PathVariable("id") long id) {
 		log.info("Fetching & Deleting Customer with id {}", id);
-
 		Customer customer = customerService.getCustomer(id);
 		if (null == customer) {
 			log.error("Unable to delete. Customer with id {} not found.", id);

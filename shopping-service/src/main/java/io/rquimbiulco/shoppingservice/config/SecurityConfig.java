@@ -14,6 +14,9 @@ import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 
+import feign.RequestInterceptor;
+import io.rquimbiulco.shoppingservice.client.interceptor.OAuth2FeignRequestInterceptor;
+
 /**
  * @author Richard
  *
@@ -49,5 +52,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		jwtDecoder.setClaimSetConverter(new UsernameSubClaimAdapter());
 		return jwtDecoder;
 	}
+	
+	@Bean
+    public RequestInterceptor securityFeignRequestInterceptor() {
+        return new OAuth2FeignRequestInterceptor();
+    }
 
 }

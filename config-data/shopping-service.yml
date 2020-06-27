@@ -1,6 +1,5 @@
 server:
   port: 8082
-
 spring:
   h2:
     console:
@@ -26,7 +25,9 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8080/auth/realms/dev
-Feign:
+hystrix:
+  shareSecurityContext: true          
+feign:
   hystrix:
     enabled: true
 management:

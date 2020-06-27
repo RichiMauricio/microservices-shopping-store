@@ -19,7 +19,7 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', "Hoxton.SR5")
+	set('springCloudVersion', "Hoxton.SR4")
 }
 
 dependencies {
@@ -27,10 +27,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
 	compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.2.1'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
