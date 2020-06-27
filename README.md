@@ -5,3 +5,4 @@ Proyecto de ejemplo del uso de mircoservicios con
 * cyrcuit breaker pattern
 * api gateway
 * external configuration
+* secutiry con keycloak
